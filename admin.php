@@ -21,7 +21,8 @@
             echo '<script type="text/javascript"> alert("Chua chon check box nao het kia!"); </script>';
         }
         else{
-
+            $del_id=implode(", ". $checkbox);
+            $luachon=mysql_query("select * from user where id IN($del_id)");
         }
     }
 ?>
